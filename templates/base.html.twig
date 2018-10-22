@@ -2,11 +2,108 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Snowlee{% endblock %}</title>
+		<link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="/">SnowSym</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" 
+				  aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+		              </button>
+						  <div class="collapse navbar-collapse" id="navbarColor02">
+							<ul class="navbar-nav mr-auto">
+							  <li class="nav-item active">
+								<a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+							  </li>
+							  <li class="nav-item">
+								<a class="nav-link" href="/forum">Forum</a>
+							  </li>
+							  <li class="nav-item">
+								<a class="nav-link" href="{{ path('create') }}"> Articles</a>
+							  </li>
+							  <li class="nav-item">
+					  <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+				  </li>
+				</ul>
+			</div>
+		</nav>
+		
+		
+		<div class="container">
+		
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        
+		</div>
+		
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark  fixed-bottom">
+
+    <div style="background-color: #6351ce;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Restez connecté avec nos réseaux sociaux!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            
+              <button type="button" class="btn btn-fb"><i class="fa fa-facebook pr-1"></i> Facebook</button>
+            
+            <!-- Twitter -->
+            <button type="button" class="btn btn-git"><i class="fa fa-github pr-1"></i> Github</button>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <button type="button" href="http://127.0.0.1:8000/contact" class="btn btn-email"><i class="fa fa-envelope pr-1"></i> Email</button>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <button type="button" class="btn btn-li"><i class="fa fa-linkedin pr-1"></i> Linkedin</button>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fa fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    
+        
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018-Mourad Kheloui Copyright:
+      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+		{% block javascripts %}
+		
+		{% endblock %}
     </body>
 </html>
